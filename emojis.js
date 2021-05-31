@@ -1,4 +1,4 @@
-const emojis = {
+var emojis = {
     '1': [
         {
         decoy: '🧁',
