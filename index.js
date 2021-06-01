@@ -12,15 +12,6 @@ let pause = false
 let hintRange = null;
 let hints = 3;
 
-function setCurrentEmoji() {
-  currentEmoji = { emoji: random(emojis[difficulty]), pos: {} }
-}
-
-function setTargetSpot() {
-  targetSpot = { x: Math.round(random(1, count)), y: Math.round(random(1, count)) }
-  console.log("targetSpot", targetSpot)
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight)
   setTargetSpot()
@@ -102,6 +93,15 @@ function draw() {
     text("Hints: " + hints, windowWidth * 0.4, windowHeight - 15)
     text(Math.round(frameCount / 30), windowWidth * 0.6, windowHeight - 15);
   }
+}
+
+function setCurrentEmoji() {
+  currentEmoji = { emoji: random(emojis[difficulty]), pos: {} }
+}
+
+function setTargetSpot() {
+  targetSpot = { x: Math.round(random(1, count)), y: Math.round(random(1, count)) }
+  console.log("targetSpot", targetSpot)
 }
 
 function mousePressed(e) {
